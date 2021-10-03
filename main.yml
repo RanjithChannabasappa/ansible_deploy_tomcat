@@ -1,0 +1,10 @@
+--- 
+- name: Deploy
+  hosts: all
+  become: true
+  vars_files:
+    - tomcat_u_p.yml      
+  tasks: 
+  - name: Tomcat
+    command: curl -v -u "{{ user_name }}":"{{ password }}" -T /home/ubuntu/tomcat_java_maven/target/WebApp-pipeline.war "http://3.109.201.248:8080//manager/text/deploy?path=/web_new&update=true"
+
