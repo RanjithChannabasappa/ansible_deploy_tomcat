@@ -6,5 +6,5 @@
     - tomcat_u_p.yml      
   tasks: 
   - name: Tomcat
-    command: curl -v -u "{{ user_name }}":"{{ password }}" -T /home/ubuntu/tomcat_java_maven/target/WebApp-pipeline.war "http://3.109.201.248:8080//manager/text/deploy?path=/web_new&update=true"
+    command: curl -v -u "{{ user_name }}":"{{ password }}" -T /home/ubuntu/actions-runner/_work/ansible_deploy_tomcat/ansible_deploy_tomcat/target/WebApp-pipeline.war "http://3.109.201.248:8080//manager/text/deploy?path=/web_new&update=true"
 
