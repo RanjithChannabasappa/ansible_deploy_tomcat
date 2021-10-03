@@ -19,7 +19,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Id
-      run: echo ${{ secrets.ANSIBLE_VAULT_PASSWORD }} > ~/.vault_key
+      run: sudo echo ${{ secrets.ANSIBLE_VAULT_PASSWORD }} > ~/.vault_key
     - name: View Key
       run: cat ~/.vault_key
     - name: Ansible-Vault
