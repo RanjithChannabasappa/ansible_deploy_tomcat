@@ -26,5 +26,5 @@ jobs:
      # run: ansible-vault view --vault-password-file vault_key tomcat_u_p.yml
     #- name: Ansible Playbook Main
      # run: ansible-playbook -i /home/ubuntu/ansible_deploy_tomcat/hosts main.yml --vault-password-file vault_key
-    - name: Deploy to tomcat
-      run: curl -v -u manager:pass -T /home/runner/work/tomcat_java_maven/tomcat_java_maven/target/WebApp-pipeline.war 'http://65.2.6.71//manager/text/deploy?path=/web_aapp&update=true'
+    #- name: Deploy to tomcat
+     # run: curl -v -u manager:pass -T /home/runner/work/tomcat_java_maven/tomcat_java_maven/target/WebApp-pipeline.war 'http://65.2.6.71//manager/text/deploy?path=/web_aapp&update=true'
