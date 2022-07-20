@@ -27,4 +27,4 @@ jobs:
     #- name: Ansible Playbook Main
      # run: ansible-playbook -i /home/ubuntu/ansible_deploy_tomcat/hosts main.yml --vault-password-file vault_key
     - name: Deploy to tomcat
-      run: curl -v -u admin:admin -T /home/runner/work/ansible_deploy_tomcat/ansible_deploy_tomcat/target/WebApp-pipeline.war 'ec2-65-1-92-171.ap-south-1.compute.amazonaws.com:8080//manager/text/deploy?path=/web_aapp&update=true'
+      run: curl -v -u admin:admin -T /home/runner/work/ansible_deploy_tomcat/ansible_deploy_tomcat/target/WebApp-pipeline.war 'ec2-65-1-92-171.ap-south-1.compute.amazonaws.com:8080/manager/text/deploy?path=/web_aapp'
